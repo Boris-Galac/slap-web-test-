@@ -1,0 +1,339 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <script defer src="/src/js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__contact d-flex">
+        <div class="header__socials d-flex">
+          <a href="#">
+            <img src="/src/assests/icons/facebook-icon.svg" alt="facebook" />
+          </a>
+          <a href="#">
+            <img src="/src/assests/icons/youtube-icon.svg" alt="youtube" />
+          </a>
+          <a href="#">
+            <img src="/src/assests/icons/mail-icon.svg" alt="mail" />
+          </a>
+          <a href="#">
+            <img src="/src/assests/icons/google-icon.svg " alt="google-plus" />
+          </a>
+        </div>
+        <figure class="header__logo">
+          <a href="#">
+            <img src="/src/assests/images/slap-logo.png" alt="udruga slap" />
+          </a>
+        </figure>
+        <div class="header__contacts d-flex">
+          <div class="header__tel">
+            <a href="tel:+38531213556" class="d-flex">
+              <img
+                src="/src/assests/icons/tel.svg"
+                alt="telephone"
+                aria-label="telephone"
+              />
+              +38531213556
+            </a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="nav__ham"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="ham menu"
+      >
+        <div aria-hidden="true" class="nav__ham-line"></div>
+        <div aria-hidden="true" class="nav__ham-line"></div>
+        <div aria-hidden="true" class="nav__ham-line"></div>
+      </button>
+      <nav class="nav">
+        <button
+          class="search-btn"
+          aria-label="search bar"
+          aria-controls="searchbar"
+          aria-expanded="false"
+        >
+          <img
+            aria-hidden="true"
+            src="/src/assests/icons/search.svg"
+            alt="search icon"
+          />
+        </button>
+        <figure class="nav__logo">
+          <img src="/src/assests/images/slap-logo.png" alt="udruga slap" />
+        </figure>
+        <ul
+          class="nav__list d-flex"
+          data-visible="false"
+          id="primary-navigation"
+        >
+          <li class="nav__item"><a class="nav__link" href="#">home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">slap</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">programi</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">portfolio</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">tim</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">dokumenti</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">news</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+      <!-- section hero -->
+
+      <section class="section hero">
+        <div class="slider">
+          <div class="hero__slider d-flex">
+            <figure class="hero__slider-picture current">
+              <img src="/src/assests/images/slider-img-1.jpg" alt="image" />
+            </figure>
+            <figure class="hero__slider-picture">
+              <img src="/src/assests/images/slider-img-2.jpg" alt="image" />
+            </figure>
+            <figure class="hero__slider-picture">
+              <img src="/src/assests/images/slider-img-3.jpg" alt="image" />
+            </figure>
+            <figure class="hero__slider-picture">
+              <img src="/src/assests/images/slider-img-4.jpg" alt="image" />
+            </figure>
+            <figure class="hero__slider-picture">
+              <img src="/src/assests/images/slider-img-5.jpg" alt="image" />
+            </figure>
+            <figure class="hero__slider-picture">
+              <img src="/src/assests/images/slider-img-6.jpg" alt="image" />
+            </figure>
+            <figure class="hero__slider-picture">
+              <img src="/src/assests/images/slider-img-7.jpg" alt="image" />
+            </figure>
+            <figure class="hero__slider-picture">
+              <img src="/src/assests/images/slider-img-8.jpg" alt="image" />
+            </figure>
+          </div>
+          <div class="hero__arrows d-flex">
+            <button class="hero__left grid-center">
+              <img src="/src/assests/icons/right-arrow.svg" alt="left arrow" />
+            </button>
+            <button class="hero__right grid-center">
+              <img src="/src/assests/icons/left-arrow.svg" alt="right arrow" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- -->
+
+      <!-- section welcome -->
+
+      <section class="section welcome">
+        <div class="container">
+          <h1 class="welcome__heading h1--heading">UDRUGA SLAP WELCOMES YOU</h1>
+          <p>
+            The highest priority of Udruga Slap is to promote effective
+            initiatives that serve the areas that need them most. We believe in
+            taking action with urgency in order to raise public awareness about
+            some of the most pressing issues facing today's society.
+          </p>
+        </div>
+      </section>
+
+      <!-- ---------------- -->
+
+      <!-- section showcase about -->
+
+      <div class="container">
+      <section class="section showcase-about d-grid">
+          <div class="row-1 d-flex">
+            <h2 class="showcase__heading h2--heading">about</h2>
+            <p>
+              Founded in 2000, Udruga Slap has made tremendous impact thanks to
+              the help of members and volunteers in the San Francisco community.
+              The core of our work lies in the continuous passion and dedication
+              we bring to the range of projects we take part in. Please join us
+              by supporting our efforts to make a meaningful difference in the
+              lives of others.
+            </p>
+            <button class="primary-btn">get in touch</button>
+          </div>
+          <div class="row-2">
+            <img
+              src="/src/assests/images/slider-img-3.jpg"
+              alt="image children"
+            />
+          </div>
+      </section>
+
+      <!-- ---------------- -->
+
+      <!-- section programs -->
+
+      <section class="section programs">
+          <div class="programs__wrapper d-flex">
+            <figure class="program__box">
+              <img src="/src/assests/images/slider-img-1.jpg" alt="program" />
+              <div class="flex-center">
+                <h2 class="program__heading">local empowerment</h2>
+                <p class="program__subheading">making change possible</p>
+              </div>
+            </figure>
+            <figure class="program__box">
+              <img src="/src/assests/images/slider-img-2.jpg" alt="program" />
+              <div class="flex-center">
+                <h2 class="program__heading">capacity building</h2>
+                <p class="program__subheading">Change for the Better</p>
+              </div>
+            </figure>
+            <figure class="program__box">
+              <img src="/src/assests/images/slider-img-3.jpg" alt="program" />
+              <div class="flex-center">
+                <h2 class="program__heading">
+                  from idea to reailty: the evolution of udruga slap
+                </h2>
+                <p class="program__subheading"></p>
+              </div>
+            </figure>
+            <figure class="program__box">
+              <img src="/src/assests/images/slider-img-4.jpg" alt="program" />
+              <div class="flex-center">
+                <h2 class="program__heading">
+                  interview with udruga slap director
+                </h2>
+                <p class="program__subheading"></p>
+              </div>
+            </figure>
+          </div>
+      </div>
+      </section>
+
+      <!-- ---------------- -->
+
+      <!-- section promo-video -->
+
+
+      <section class="section promo-video">
+          <div class="container">
+            <div class="promo-video__wrapper">
+              <h2 class="promo-video__heading h2--heading">
+                Video
+              </h2>
+              <div>
+                <div class="promo-video__main-video">
+                  <iframe id="main-video" src="https://www.youtube.com/embed/Hoz21_3nEXA" title="Priroda priča pokretima - Panona fest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="promo-video__inner-wrapper">
+                  <div class="promo-video__sub-video
+                   d-flex">
+                  <div class="video">
+                      <iframe src="https://www.youtube.com/embed/ErKJjrtCI-k" title="Priroda priča mirisima - opg Čudesna šuma" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/BJJKi7Y61ug" title="Authentic Travel Expirience of Pannonia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/D61Fji416a8" title="Priroda priča zvukovima - Park prirode Papuk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/5gYFw_6Tyes" title="Priroda priča pokretima - Slama Land Art" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/vCQ0CvKMR3o" title="Priroda priča pokretima - Vinatlon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                    <iframe src="https://www.youtube.com/embed/UC5mKQEaFXg" title="Priroda priča bojama - VukovArt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <button class="video__left"><img src="/src/assests/icons/right-arrow.svg" alt="left"></button>
+                <button class="video__right"><img src="/src/assests/icons/left-arrow.svg" alt="right"></button>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- ---------------- -->
+
+      <!-- section contact -->
+
+        <section class="section contact">
+          <div class="container">
+            <div class="contact__wrapper d-flex">
+              <div class="contact__inner-wrapper">
+                <div>
+                  <h2 class="contact__heading h2--heading">contact us</h2>
+                  <p aria-label="address">
+                    Ulica Otokara Keršovanija 31, Osijek, Croatia
+                  </p>
+                  <p aria-label="mail">udruga.slap@gmail.com</p>
+                  <p aria-label="telephone">+38531 213 556</p>
+                </div>
+              </div>
+              <div class="contact__inner-wrapper">
+                <form action="https://formsubmit.co/boris.modranit@gmail.com" method="POST" class="contact-form d-grid" aria-label="Contact form">
+                  <fieldset>
+                  <div>
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="contact__input">
+                      <label for="name" aria-label="Your name"> Name </label>
+                      <input id="name" type="text" aria-required="true" required />
+                    </div>
+                    <div class="contact__input">
+                      <label for="mail" aria-label="Your email address"> Email </label>
+                      <input id="mail" type="email" aria-required="true" required />
+                    </div>
+                  </div>
+                  <div class="contact__input">
+                    <label for="subject" aria-label="Your email subject"> Subject </label>
+                    <input type="text" id="subject" />
+                  </div>
+                  <div class="contact__input">
+                    <label for="message"> Message </label>
+                    <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    aria-required="true" required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="primary-btn" aria-label="Send message">
+                    send message
+                  </button>
+                </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------------- -->
+
+        <!-- search bar -->
+
+        <div class="search__overlay" aria-hidden="true" data-visible="false">
+            <button aria-label="close search" class="search__close">
+                <div aria-hidden="true" class="line"></div>
+                <div aria-hidden="true" class="line"></div>
+            </button>
+            <form id="search" class="form__search" aria-label="search bar"
+            id="searchbar"
+            >
+             <input class="search-input" type="text" title="search bar" name="search" id="search" placeholder="Search for something...">
+             <button class="search-submit" type="submit"><img aria-hidden="true" src="/src/assests/icons/search.svg"></button>
+            </form>
+        </div>
+
+    </main>
+  </body>
+</html>

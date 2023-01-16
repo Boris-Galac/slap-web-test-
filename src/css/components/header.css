@@ -1,0 +1,153 @@
+/* socials contact */
+
+.header__contact {
+  position: relative;
+  background-color: var(--green-400);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  padding-inline: 2rem;
+}
+.header__contacts,
+.header__socials,
+.header__tel a {
+  gap: 1rem;
+}
+.header__contacts {
+  align-items: center;
+}
+.header__tel a {
+  align-items: center;
+  color: var(--white);
+}
+.header__logo {
+  display: none;
+}
+
+/* navbar */
+
+.nav {
+  background-color: var(--neutral-800);
+  padding: 1rem;
+}
+
+.nav__list {
+  justify-content: center;
+  gap: 3rem;
+  font-weight: 500;
+  flex-direction: column;
+  position: absolute;
+  background-color: transparent;
+  text-align: center;
+  inset: 0;
+  z-index: 10;
+}
+.nav__link {
+  text-transform: uppercase;
+  transition: 0.2s;
+  font-size: 2rem;
+}
+.nav__list:hover .nav__link {
+  opacity: 0.4;
+  scale: 0.9;
+}
+.nav__list .nav__link:hover {
+  opacity: 1;
+  scale: 1.25;
+}
+
+/* nav hamburger icon */
+
+.nav__ham {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  aspect-ratio: 1;
+  width: 2.7rem !important;
+  transform: translateY(-50%);
+  top: 5.1rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 100;
+  background-color: var(--neutral-800);
+  width: 3rem;
+  padding: 2px;
+}
+.nav__ham-line {
+  position: absolute;
+  height: 2px;
+  width: 90%;
+  background-color: var(--white);
+  transition: 0.3s;
+}
+.nav__ham-line:first-child {
+  top: 9px;
+}
+.nav__ham-line:last-child {
+  bottom: 9px;
+}
+.nav__ham-line {
+  pointer-events: none;
+}
+
+/* --------------------- */
+
+.nav__list[data-visible="false"] {
+  transform: scale(0);
+}
+
+@media (min-width: 960px) {
+  .header__logo {
+    display: block;
+  }
+  .nav__logo {
+    display: none;
+  }
+  .nav__ham {
+    display: none;
+  }
+  .nav__list {
+    justify-content: center;
+    gap: 3rem;
+    font-weight: 500;
+    flex-direction: row;
+    position: static;
+    left: 0;
+    transform: scale(1) !important;
+    background-color: var(--neutral-800);
+    padding: 0;
+    text-align: center;
+  }
+  .nav__link {
+    font-size: 1rem;
+  }
+}
+
+/* search bar */
+
+.search-btn {
+  background-color: var(--neutral-800);
+  padding: 2px;
+  position: absolute;
+  top: 3.76rem;
+  right: 5rem;
+  z-index: 3;
+  aspect-ratio: 1;
+  padding: 0.6rem;
+  transition: 0.15s;
+}
+.search-btn:hover {
+  background-color: var(--neutral-700);
+}
+.search-btn img {
+  width: 1.5rem;
+}
+
+@media (min-width: 60rem) {
+  .search-btn {
+    position: absolute;
+    top: 4.8rem;
+    right: 2rem;
+  }
+}
