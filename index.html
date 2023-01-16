@@ -11,8 +11,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/src/css/style.css" />
     <script defer src="/src/js/main.js"></script>
+
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
 
   <body>
@@ -134,7 +135,7 @@
         </div>
       </section>
 
-      <!-- ---------------- -->
+      <!-------------------->
 
       <!-- section welcome -->
 
@@ -150,7 +151,7 @@
         </div>
       </section>
 
-      <!-- ---------------- -->
+      <!-------------------->
 
       <!-- section showcase about -->
 
@@ -176,7 +177,7 @@
           </div>
       </section>
 
-      <!-- ---------------- -->
+      <!------------------------>
 
       <!-- section programs -->
 
@@ -218,7 +219,7 @@
       </div>
       </section>
 
-      <!-- ---------------- -->
+      <!-------------------->
 
       <!-- section promo-video -->
 
@@ -262,7 +263,7 @@
           </div>
       </section>
 
-      <!-- ---------------- -->
+      <!----------------------->
 
       <!-- section contact -->
 
@@ -282,58 +283,59 @@
               <div class="contact__inner-wrapper">
                 <form action="https://formsubmit.co/boris.modranit@gmail.com" method="POST" class="contact-form d-grid" aria-label="Contact form">
                   <fieldset>
-                  <div>
-                    <input type="hidden" name="_captcha" value="false">
-                    <div class="contact__input">
-                      <label for="name" aria-label="Your name"> Name </label>
-                      <input id="name" type="text" aria-required="true" required />
-                    </div>
-                    <div class="contact__input">
-                      <label for="mail" aria-label="Your email address"> Email </label>
-                      <input id="mail" type="email" aria-required="true" required />
-                    </div>
-                  </div>
-                  <div class="contact__input">
-                    <label for="subject" aria-label="Your email subject"> Subject </label>
-                    <input type="text" id="subject" />
-                  </div>
-                  <div class="contact__input">
-                    <label for="message"> Message </label>
-                    <textarea
-                    name="message"
-                    id="message"
-                    cols="30"
-                    rows="10"
-                    aria-required="true" required
-                    ></textarea>
-                  </div>
-                  <button type="submit" class="primary-btn" aria-label="Send message">
-                    send message
-                  </button>
+                      <div>
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="contact__input">
+                          <label for="name" aria-label="Your name"> Name </label>
+                          <input id="name" type="text" aria-required="true" required />
+                        </div>
+                        <div class="contact__input">
+                          <label for="mail" aria-label="Your email address"> Email </label>
+                          <input id="mail" type="email" aria-required="true" required />
+                        </div>
+                      </div>
+                      <div class="contact__input">
+                        <label for="subject" aria-label="Your email subject"> Subject </label>
+                        <input type="text" id="subject" />
+                      </div>
+                      <div class="contact__input">
+                        <label for="message"> Message </label>
+                        <textarea
+                        name="message"
+                        id="message"
+                        cols="30"
+                        rows="10"
+                        aria-required="true" required
+                        ></textarea>
+                      </div>
+                      <button type="submit" class="primary-btn" aria-label="Send message">
+                        send message
+                      </button>
                 </fieldset>
                 </form>
               </div>
             </div>
           </div>
         </section>
+        
+        <!-------------------->
+        
+      </main>
 
-        <!-- ---------------- -->
+      <!-- search bar -->
+      <div class="search__overlay" aria-hidden="true" data-visible="false">
+        <button aria-label="close search" class="search__close">
+          <div aria-hidden="true" class="line"></div>
+          <div aria-hidden="true" class="line"></div>
+        </button>
+        <form id="search" class="form__search" aria-label="search bar"
+        id="searchbar"
+        >
+        <input class="search-input" type="text" title="search bar" name="search" id="search" placeholder="Search for something...">
+        <button class="search-submit" type="submit"><img aria-hidden="true" src="/src/assests/icons/search.svg"></button>
+      </form>
+    </div>
+    <!------------------->
 
-        <!-- search bar -->
-
-        <div class="search__overlay" aria-hidden="true" data-visible="false">
-            <button aria-label="close search" class="search__close">
-                <div aria-hidden="true" class="line"></div>
-                <div aria-hidden="true" class="line"></div>
-            </button>
-            <form id="search" class="form__search" aria-label="search bar"
-            id="searchbar"
-            >
-             <input class="search-input" type="text" title="search bar" name="search" id="search" placeholder="Search for something...">
-             <button class="search-submit" type="submit"><img aria-hidden="true" src="/src/assests/icons/search.svg"></button>
-            </form>
-        </div>
-
-    </main>
   </body>
 </html>

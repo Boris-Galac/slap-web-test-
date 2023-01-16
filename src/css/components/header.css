@@ -98,6 +98,12 @@
 }
 
 @media (min-width: 960px) {
+  .header {
+    position: fixed;
+    inset: auto 0;
+    z-index: 100;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.422);
+  }
   .header__logo {
     display: block;
   }
@@ -147,7 +153,7 @@
 @media (min-width: 60rem) {
   .search-btn {
     position: absolute;
-    top: 4.8rem;
+    top: 4.6rem;
     right: 2rem;
   }
 }

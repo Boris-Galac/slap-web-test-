@@ -123,6 +123,7 @@ left.addEventListener("click", (e) => {
 const searchBtn = document.querySelector(".search-btn");
 const searchBtnClose = document.querySelector(".search__close");
 const searchOverlay = document.querySelector(".search__overlay");
+
 searchBtn.addEventListener("click", (e) => {
   if (searchOverlay.getAttribute("data-visible") === "false") {
     searchOverlay.setAttribute("data-visible", "true");
@@ -140,4 +141,18 @@ function closeSearchWindow() {
   searchOverlay.setAttribute("aria-hidden", "true");
   searchOverlay.setAttribute("data-visible", "false");
   searchBtn.setAttribute("aria-expanded", "false");
+}
+
+// main padding top
+
+const headerHeight = document.querySelector(".header").scrollHeight;
+const main = document.querySelector(".main");
+
+function paddingTopMain() {
+  main.style = `
+    padding-top: ${headerHeight}px;
+  `;
+}
+if (window.innerWidth > 960) {
+  paddingTopMain();
 }
