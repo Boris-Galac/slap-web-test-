@@ -51,6 +51,7 @@
   cursor: pointer;
   animation: overlay 1s forwards;
   opacity: 0;
+  z-index: 30;
 }
 @keyframes overlay {
   to {
@@ -72,4 +73,10 @@
     opacity: 1;
     pointer-events: visible;
   }
+}
+
+/* sidebar */
+
+.sidebar.active {
+  transform: translateX(0%);
 }

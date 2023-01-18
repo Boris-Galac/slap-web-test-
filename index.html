@@ -11,9 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script defer src="/src/js/main.js"></script>
-
     <link rel="stylesheet" href="/src/css/style.css" />
+    <script defer src="/src/js/script.js"></script>
   </head>
 
   <body>
@@ -75,16 +74,16 @@
           />
         </button>
         <figure class="nav__logo">
-          <img src="/src/assests/images/slap-logo.png" alt="udruga slap" />
+          <a href="index.html"><img src="/src/assests/images/slap-logo.png" alt="udruga slap" /></a>
         </figure>
         <ul
           class="nav__list d-flex"
           data-visible="false"
           id="primary-navigation"
         >
-          <li class="nav__item"><a class="nav__link" href="#">home</a></li>
+          <li class="nav__item"><a class="nav__link" href="index.html">home</a></li>
           <li class="nav__item"><a class="nav__link" href="#">slap</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">programi</a></li>
+          <li class="nav__item"><a class="nav__link" href="programs.html">programi</a></li>
           <li class="nav__item"><a class="nav__link" href="#">portfolio</a></li>
           <li class="nav__item"><a class="nav__link" href="#">tim</a></li>
           <li class="nav__item"><a class="nav__link" href="#">dokumenti</a></li>
@@ -141,7 +140,7 @@
 
       <section class="section welcome">
         <div class="container">
-          <h1 class="welcome__heading h1--heading">UDRUGA SLAP WELCOMES YOU</h1>
+          <h1 class="welcome__heading h1--heading text-center">UDRUGA SLAP WELCOMES YOU</h1>
           <p>
             The highest priority of Udruga Slap is to promote effective
             initiatives that serve the areas that need them most. We believe in
@@ -155,10 +154,10 @@
 
       <!-- section showcase about -->
 
-      <div class="container">
-      <section class="section showcase-about d-grid">
+      <!-- <div class="container"> -->
+      <section class="section showcase-about d-grid container">
           <div class="row-1 d-flex">
-            <h2 class="showcase__heading h2--heading">about</h2>
+            <h2 class="showcase__heading h2--heading text-center">about</h2>
             <p>
               Founded in 2000, Udruga Slap has made tremendous impact thanks to
               the help of members and volunteers in the San Francisco community.
@@ -182,6 +181,8 @@
       <!-- section programs -->
 
       <section class="section programs">
+        <div class="container">
+        <h2 class="programs__heading h2--heading px-2">Programs</h2>
           <div class="programs__wrapper d-flex">
             <figure class="program__box">
               <img src="/src/assests/images/slider-img-1.jpg" alt="program" />
@@ -217,12 +218,13 @@
             </figure>
           </div>
       </div>
+    </div>
+
       </section>
 
       <!-------------------->
 
       <!-- section promo-video -->
-
 
       <section class="section promo-video">
           <div class="container">
@@ -269,7 +271,7 @@
 
         <section class="section contact">
           <div class="container">
-            <div class="contact__wrapper d-flex">
+            <div class="contact__wrapper d-flex px-1">
               <div class="contact__inner-wrapper">
                 <div>
                   <h2 class="contact__heading h2--heading">contact us</h2>
@@ -319,7 +321,26 @@
         </section>
         
         <!-------------------->
-        
+        <aside class="sidebar" aria-hidden="true">
+          <div role="button" class="sidebar-btn">sidebar</div>
+          <div class="sidebar-row">
+            <form id="search" class="form__search" aria-label="search bar"
+            id="searchbar"
+            >
+            <input class="search-input" type="text" title="search bar" name="search" id="search" placeholder="Search for something...">
+            <button class="search-submit" type="submit"><img aria-hidden="true" src="/src/assests/icons/search.svg"></button>
+          </form>
+          </div>
+          <div class="sidebar-row">
+            <h3 class="sidebar__heading">Projects</h3>
+            <ul class="sidebar__list">
+              <li class="sidebar__item"><a href="#">local empowerment</a></li>
+              <li class="sidebar__item"><a href="#">capacity building</a></li>
+              <li class="sidebar__item"><a href="#">slap</a></li>
+              <li class="sidebar__item"><a href="#">slap interview</a></li>
+            </ul>
+          </div>
+        </aside>
       </main>
 
       <!-- search bar -->

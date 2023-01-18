@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <script defer src="/src/js/script.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__contact d-flex">
+        <div class="header__socials d-flex">
+          <a href="#">
+            <img src="/src/assests/icons/facebook-icon.svg" alt="facebook" />
+          </a>
+          <a href="#">
+            <img src="/src/assests/icons/youtube-icon.svg" alt="youtube" />
+          </a>
+          <a href="#">
+            <img src="/src/assests/icons/mail-icon.svg" alt="mail" />
+          </a>
+          <a href="#">
+            <img src="/src/assests/icons/google-icon.svg " alt="google-plus" />
+          </a>
+        </div>
+        <figure class="header__logo">
+          <a href="#">
+            <img src="/src/assests/images/slap-logo.png" alt="udruga slap" />
+          </a>
+        </figure>
+        <div class="header__contacts d-flex">
+          <div class="header__tel">
+            <a href="tel:+38531213556" class="d-flex">
+              <img
+                src="/src/assests/icons/tel.svg"
+                alt="telephone"
+                aria-label="telephone"
+              />
+              +38531213556
+            </a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="nav__ham"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="ham menu"
+      >
+        <div aria-hidden="true" class="nav__ham-line"></div>
+        <div aria-hidden="true" class="nav__ham-line"></div>
+        <div aria-hidden="true" class="nav__ham-line"></div>
+      </button>
+      <nav class="nav">
+        <button
+          class="search-btn"
+          aria-label="search bar"
+          aria-controls="searchbar"
+          aria-expanded="false"
+        >
+          <img
+            aria-hidden="true"
+            src="/src/assests/icons/search.svg"
+            alt="search icon"
+          />
+        </button>
+        <figure class="nav__logo">
+          <a href="index.html"
+            ><img src="/src/assests/images/slap-logo.png" alt="udruga slap"
+          /></a>
+        </figure>
+        <ul
+          class="nav__list d-flex"
+          data-visible="false"
+          id="primary-navigation"
+        >
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">home</a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="#">slap</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="programs.html">programi</a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="#">portfolio</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">tim</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">dokumenti</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">news</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main main-programs">
+      <!-- section programs -->
+
+      <section class="section">
+        <div class="container">
+          <h2 class="h2--heading">Programs</h2>
+        </div>
+      </section>
+
+      <!-------------------->
+    </main>
+
+    <!-- search bar -->
+
+    <div class="search__overlay" aria-hidden="true" data-visible="false">
+      <button aria-label="close search" class="search__close">
+        <div aria-hidden="true" class="line"></div>
+        <div aria-hidden="true" class="line"></div>
+      </button>
+      <form
+        id="search"
+        class="form__search"
+        aria-label="search bar"
+        id="searchbar"
+      >
+        <input
+          class="search-input"
+          type="text"
+          title="search bar"
+          name="search"
+          id="search"
+          placeholder="Search for something..."
+        />
+        <button class="search-submit" type="submit">
+          <img aria-hidden="true" src="/src/assests/icons/search.svg" />
+        </button>
+      </form>
+    </div>
+
+    <!------------------->
+  </body>
+</html>

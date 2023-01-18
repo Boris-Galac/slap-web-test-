@@ -1,6 +1,7 @@
 /* contact us */
 
 .contact {
+  background-color: var(--neutral-100);
 }
 .contact__inner-wrapper:nth-child(1) > div {
   position: relative;
@@ -17,11 +18,9 @@
   width: 50%;
   background-color: rgba(165, 42, 42, 0.676);
 }
-
 .contact__wrapper {
   flex-wrap: wrap;
   justify-content: center;
-  padding-inline: 1rem;
   padding-block: 2rem;
   width: min(90vw, 60rem);
   margin-inline: auto;

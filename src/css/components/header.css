@@ -40,7 +40,7 @@
   background-color: transparent;
   text-align: center;
   inset: 0;
-  z-index: 10;
+  z-index: 40;
 }
 .nav__link {
   text-transform: uppercase;

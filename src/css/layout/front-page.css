@@ -1,7 +1,9 @@
+/* front page */
+
 .main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 /* section welcome */
@@ -33,11 +35,22 @@
   margin-inline: auto;
 }
 
-/* section showcase about */
+/* section showcase-about */
 
 .showcase-about {
+  position: relative;
   background-color: var(--neutral-200);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.showcase-about::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--neutral-800);
+  width: 40vw;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -2.7rem;
 }
 .row-1 {
   flex-direction: column;
@@ -67,6 +80,12 @@
 /* section programs */
 
 .programs {
+}
+.programs__heading {
+  margin-bottom: 0;
+  padding-block: 2rem;
+  background-color: var(--neutral-800);
+  color: var(--white);
 }
 .programs__wrapper {
   flex-wrap: wrap;
@@ -119,7 +138,7 @@
   text-transform: capitalize;
 }
 
-/* video */
+/* section video */
 
 .promo-video {
   margin-inline: auto;

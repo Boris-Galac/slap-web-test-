@@ -15,10 +15,12 @@
 @import "components/hero-slider.css";
 @import "components/contact.css";
 @import "components/search.css";
+@import "components/sidebar.css";
 
 /* layout */
 
 @import "layout/front-page.css";
+@import "layout/programs.css";
 
 @import "utilities/js-classes.css";
 @import "utilities/utilities.css";

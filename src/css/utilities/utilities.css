@@ -36,5 +36,15 @@
   display: grid;
   place-items: center;
 }
-.section {
+.text-center {
+  text-align: center;
+}
+
+/* spacing  */
+
+.px-2 {
+  padding-inline: min(5vw, 2rem);
+}
+.px-1 {
+  padding-inline: min(5vw, 1rem);
 }

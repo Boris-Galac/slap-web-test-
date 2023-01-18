@@ -31,9 +31,40 @@ hamBtn.addEventListener("click", (e) => {
   }
 });
 
-//////////  IMAGE CAROUSEL
+if (location.href.includes("index")) {
+  ////////// FUNCTIONAL VIDEO CAROUSEL
+  const left = document.querySelector(".video__left");
+  const right = document.querySelector(".video__right");
+  const scrollContainer = document.querySelector(".promo-video__sub-video");
 
-if (location.href.includes("5500")) {
+  const videoClips = document.querySelectorAll(".video");
+  videoClips.forEach((video) => {
+    video.addEventListener("click", (e) => {
+      let singleURL = e.target.firstElementChild.src;
+      e.target.closest(
+        ".promo-video__inner-wrapper"
+      ).previousElementSibling.firstElementChild.src = singleURL;
+    });
+  });
+
+  right.addEventListener("click", (e) => {
+    scrollContainer.scrollBy({
+      top: 0,
+      left: 1,
+      behavior: "smooth",
+    });
+  });
+
+  left.addEventListener("click", (e) => {
+    scrollContainer.scrollBy({
+      top: 0,
+      left: -1,
+      behavior: "smooth",
+    });
+  });
+
+  //////////  IMAGE CAROUSEL
+
   const leftArrow = document.querySelector(".hero__left");
   const rightArrow = document.querySelector(".hero__right");
   if (rightArrow) {
@@ -86,39 +117,7 @@ if (location.href.includes("5500")) {
   }
 }
 
-////////// functional video carousel
-
-const left = document.querySelector(".video__left");
-const right = document.querySelector(".video__right");
-const scrollContainer = document.querySelector(".promo-video__sub-video");
-
-const videoClips = document.querySelectorAll(".video");
-videoClips.forEach((video) => {
-  video.addEventListener("click", (e) => {
-    let singleURL = e.target.firstElementChild.src;
-    e.target.closest(
-      ".promo-video__inner-wrapper"
-    ).previousElementSibling.firstElementChild.src = singleURL;
-  });
-});
-
-right.addEventListener("click", (e) => {
-  scrollContainer.scrollBy({
-    top: 0,
-    left: 1,
-    behavior: "smooth",
-  });
-});
-
-left.addEventListener("click", (e) => {
-  scrollContainer.scrollBy({
-    top: 0,
-    left: -1,
-    behavior: "smooth",
-  });
-});
-
-//////// search bar
+//////// SEARCH BAR
 
 const searchBtn = document.querySelector(".search-btn");
 const searchBtnClose = document.querySelector(".search__close");
@@ -143,11 +142,10 @@ function closeSearchWindow() {
   searchBtn.setAttribute("aria-expanded", "false");
 }
 
-// main padding top
+// MAIN PADDING TOP
 
 const headerHeight = document.querySelector(".header").scrollHeight;
 const main = document.querySelector(".main");
-
 function paddingTopMain() {
   main.style = `
     padding-top: ${headerHeight}px;
@@ -156,3 +154,13 @@ function paddingTopMain() {
 if (window.innerWidth > 960) {
   paddingTopMain();
 }
+
+// SIDEBAR BUTTON to OPEN
+
+const asideBtn = document.querySelector(".sidebar-btn");
+
+asideBtn.addEventListener("click", (e) => {
+  asideBtn.parentElement.classList.toggle("active");
+  // overlay.classList.add("overlay");
+  // document.body.append(overlay);
+});
