@@ -58,7 +58,7 @@
   width: 95%;
   margin-inline: auto;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 1;
 }
 .hero__arrows img {
   height: 2rem;

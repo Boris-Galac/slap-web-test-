@@ -1,7 +1,26 @@
 const primaryNav = document.querySelector(".nav__list");
 const hamBtn = document.querySelector(".nav__ham");
 const hamLines = document.querySelectorAll(".nav__ham-line");
-let overlay = document.createElement("div");
+const overlay = document.querySelector(".overlay");
+
+function createOverlay(x) {
+  let visibilityOverlay = overlay.getAttribute("data-visible");
+  if (visibilityOverlay === "false") {
+    overlay.setAttribute("data-visible", "true");
+    overlay.setAttribute("aria-hidden", "false");
+  } else {
+    x.setAttribute("data-visible", "false");
+    x.setAttribute("aria-hidden", "true");
+    overlay.setAttribute("data-visible", "false");
+    overlay.setAttribute("aria-hidden", "true");
+  }
+  overlay.addEventListener("click", (e) => {
+    overlay.setAttribute("data-visible", "false");
+    overlay.setAttribute("aria-hidden", "true");
+    x.setAttribute("data-visible", "false");
+    x.setAttribute("aria-hidden", "true");
+  });
+}
 
 ///////////  OPEN PRIMARY NAV AND CLOSE
 
@@ -11,28 +30,29 @@ hamBtn.addEventListener("click", (e) => {
     primaryNav.setAttribute("data-visible", "true");
     hamBtn.setAttribute("aria-expanded", "true");
     hamLines.forEach((line) => line.classList.add("active"));
+    createOverlay(primaryNav);
     // overlay
-    overlay.classList.add("overlay");
-    document.body.append(overlay);
-    overlay.addEventListener("click", (e) => {
-      primaryNav.setAttribute("data-visible", "false");
-      hamBtn.setAttribute("aria-expanded", "false");
-      hamLines.forEach((line) => line.classList.remove("active"));
-      primaryNav.classList.add("inactive");
-      overlay.remove();
-    });
+    // overlay.classList.add("overlay");
+    // document.body.append(overlay);
+    // overlay.addEventListener("click", (e) => {
+    //   primaryNav.setAttribute("data-visible", "false");
+    //   hamBtn.setAttribute("aria-expanded", "false");
+    //   hamLines.forEach((line) => line.classList.remove("active"));
+    //   overlay.remove();
+    // });
     // -----
   } else {
     primaryNav.classList.add("inactive");
     primaryNav.setAttribute("data-visible", "false");
+    overlay.setAttribute("data-visible", "false");
     hamBtn.setAttribute("aria-expanded", "false");
     hamLines.forEach((line) => line.classList.remove("active"));
-    overlay.remove();
   }
 });
 
+////////// FUNCTIONAL VIDEO CAROUSEL
+
 if (location.href.includes("index")) {
-  ////////// FUNCTIONAL VIDEO CAROUSEL
   const left = document.querySelector(".video__left");
   const right = document.querySelector(".video__right");
   const scrollContainer = document.querySelector(".promo-video__sub-video");
@@ -158,9 +178,15 @@ if (window.innerWidth > 960) {
 // SIDEBAR BUTTON to OPEN
 
 const asideBtn = document.querySelector(".sidebar-btn");
+const sidebar = document.querySelector(".sidebar");
 
 asideBtn.addEventListener("click", (e) => {
-  asideBtn.parentElement.classList.toggle("active");
-  // overlay.classList.add("overlay");
-  // document.body.append(overlay);
+  sidebar.setAttribute("data-visible", "true");
+  if (
+    overlay.getAttribute("data-visible") === "true" &&
+    sidebar.getAttribute("data-visible") === "true"
+  ) {
+    sidebar.setAttribute("data-visible", "false");
+  }
+  createOverlay(sidebar);
 });

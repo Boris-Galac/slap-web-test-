@@ -130,6 +130,7 @@
 :root {
   --primary-btn-clr: hsl(235, 11%, 22%);
   --primary-btn-clr-hover: hsl(235, 11%, 35%);
+  --slap-clr: hsl(186, 81%, 32%);
 }
 
 *,
@@ -148,7 +149,6 @@ html,
 body {
   height: 100%;
   overflow-x: hidden;
-  isolation: isolate;
 }
 
 img,
@@ -269,7 +269,7 @@ p {
 
 .header__contact {
   position: relative;
-  background-color: var(--green-400);
+  background-color: var(--slap-clr);
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
@@ -311,7 +311,7 @@ p {
   background-color: transparent;
   text-align: center;
   inset: 0;
-  z-index: 40;
+  z-index: 3;
 }
 
 .nav__link {
@@ -343,10 +343,15 @@ p {
   top: 5.1rem;
   right: 2rem;
   cursor: pointer;
-  z-index: 100;
+  z-index: 4;
   background-color: var(--neutral-800);
   width: 3rem;
   padding: 2px;
+  transition: 0.15s;
+}
+
+.nav__ham:hover {
+  background-color: var(--neutral-700);
 }
 
 .nav__ham-line {
@@ -416,7 +421,7 @@ p {
   position: absolute;
   top: 3.76rem;
   right: 5rem;
-  z-index: 3;
+  z-index: 4;
   aspect-ratio: 1;
   padding: 0.6rem;
   transition: 0.15s;
@@ -506,7 +511,7 @@ p {
   width: 95%;
   margin-inline: auto;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 1;
 }
 
 .hero__arrows img {
@@ -752,8 +757,15 @@ p {
   display: grid;
   gap: 1rem;
   transition: 0.5s;
-  transform: translateX(95%);
   transform-origin: left;
+}
+
+.sidebar[data-visible="true"] {
+  transform: translateX(0%);
+}
+
+.sidebar[data-visible="false"] {
+  transform: translateX(95%);
 }
 
 .sidebar-row {
@@ -813,6 +825,9 @@ p {
   cursor: pointer;
   border-radius: 5px 0 0 5px;
   font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .sidebar-btn:hover {
@@ -1143,7 +1158,7 @@ p {
 
 /* overlay */
 
-.overlay {
+.overlay[data-visible="false"] {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(10px);
@@ -1151,14 +1166,40 @@ p {
   inset: 0;
   z-index: 0;
   transition: 0.5s;
-  z-index: 9;
   cursor: pointer;
-  animation: overlay 1s forwards;
+  z-index: 2;
+  pointer-events: none;
+  animation: overlay-closed 0.4s forwards;
   opacity: 0;
-  z-index: 30;
 }
 
-@keyframes overlay {
+@keyframes overlay-closed {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.overlay[data-visible="true"] {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  inset: 0;
+  z-index: 0;
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: visible;
+  animation: overlay-opened 1s forwards;
+}
+
+@keyframes overlay-opened {
+  from {
+    opacity: 0;
+  }
   to {
     opacity: 1;
   }
@@ -1183,9 +1224,9 @@ p {
 
 /* sidebar */
 
-.sidebar.active {
+/* .sidebar.active {
   transform: translateX(0%);
-}
+} */
 
 @media (min-width: 90rem) {
   .container {

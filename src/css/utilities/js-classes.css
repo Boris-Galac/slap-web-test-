@@ -40,20 +40,43 @@
 
 /* overlay */
 
-.overlay {
+.overlay[data-visible="false"] {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   inset: 0;
   z-index: 0;
   transition: 0.5s;
-  z-index: 9;
   cursor: pointer;
-  animation: overlay 1s forwards;
+  z-index: 2;
+  pointer-events: none;
+  animation: overlay-closed 0.4s forwards;
   opacity: 0;
-  z-index: 30;
 }
-@keyframes overlay {
+@keyframes overlay-closed {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.overlay[data-visible="true"] {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  inset: 0;
+  z-index: 0;
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: visible;
+  animation: overlay-opened 1s forwards;
+}
+@keyframes overlay-opened {
+  from {
+    opacity: 0;
+  }
   to {
     opacity: 1;
   }
@@ -77,6 +100,6 @@
 
 /* sidebar */
 
-.sidebar.active {
+/* .sidebar.active {
   transform: translateX(0%);
-}
+} */

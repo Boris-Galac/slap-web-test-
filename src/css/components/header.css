@@ -2,7 +2,7 @@
 
 .header__contact {
   position: relative;
-  background-color: var(--green-400);
+  background-color: var(--slap-clr);
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
@@ -40,7 +40,7 @@
   background-color: transparent;
   text-align: center;
   inset: 0;
-  z-index: 40;
+  z-index: 3;
 }
 .nav__link {
   text-transform: uppercase;
@@ -69,10 +69,14 @@
   top: 5.1rem;
   right: 2rem;
   cursor: pointer;
-  z-index: 100;
+  z-index: 4;
   background-color: var(--neutral-800);
   width: 3rem;
   padding: 2px;
+  transition: 0.15s;
+}
+.nav__ham:hover {
+  background-color: var(--neutral-700);
 }
 .nav__ham-line {
   position: absolute;
@@ -138,7 +142,7 @@
   position: absolute;
   top: 3.76rem;
   right: 5rem;
-  z-index: 3;
+  z-index: 4;
   aspect-ratio: 1;
   padding: 0.6rem;
   transition: 0.15s;

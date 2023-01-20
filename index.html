@@ -321,8 +321,8 @@
         </section>
         
         <!-------------------->
-        <aside class="sidebar" aria-hidden="true">
-          <div role="button" class="sidebar-btn">sidebar</div>
+        <aside class="sidebar" aria-hidden="true" data-visible="false">
+          <div role="button" class="sidebar-btn">menu</div>
           <div class="sidebar-row">
             <form id="search" class="form__search" aria-label="search bar"
             id="searchbar"
@@ -356,6 +356,12 @@
         <button class="search-submit" type="submit"><img aria-hidden="true" src="/src/assests/icons/search.svg"></button>
       </form>
     </div>
+    <!------------------->
+
+    <!-- overlay -->
+
+    <div class="overlay" data-visible="false" aria-hidden="true"></div>
+
     <!------------------->
 
   </body>

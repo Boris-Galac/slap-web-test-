@@ -125,4 +125,5 @@
 :root {
   --primary-btn-clr: hsl(235, 11%, 22%);
   --primary-btn-clr-hover: hsl(235, 11%, 35%);
+  --slap-clr: hsl(186, 81%, 32%);
 }
