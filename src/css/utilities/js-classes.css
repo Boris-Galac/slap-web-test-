@@ -98,8 +98,14 @@
   }
 }
 
-/* sidebar */
+/* specific */
 
-/* .sidebar.active {
-  transform: translateX(0%);
-} */
+.hidden {
+  opacity: 0;
+  transition: 2s;
+  transform: translatex(100%);
+}
+.show {
+  opacity: 1;
+  transform: translatex(0);
+}

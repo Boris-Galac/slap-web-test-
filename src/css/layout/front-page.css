@@ -3,7 +3,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 /* section welcome */
@@ -25,8 +25,6 @@
 }
 .welcome__heading {
   margin-inline: 1rem;
-}
-.welcome .h1--heading {
   margin-bottom: 2rem;
 }
 .welcome p {
@@ -35,22 +33,14 @@
   margin-inline: auto;
 }
 
+/* -------------- */
+
 /* section showcase-about */
 
 .showcase-about {
   position: relative;
   background-color: var(--neutral-200);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-.showcase-about::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  background-color: var(--neutral-800);
-  width: 40vw;
-  transform: translateX(-50%);
-  left: 50%;
-  bottom: -2.7rem;
 }
 .row-1 {
   flex-direction: column;
@@ -76,6 +66,16 @@
     margin-inline: 0;
   }
 }
+
+/* -------------- */
+
+/* separator  */
+
+.separator-slap {
+  margin-inline: auto;
+}
+
+/* -------------- */
 
 /* section programs */
 
@@ -125,7 +125,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: hsla(0, 0%, 0%, 0.5);
 }
 .program__heading {
   text-transform: uppercase;
@@ -137,6 +137,8 @@
   color: var(--white);
   text-transform: capitalize;
 }
+
+/* -------------- */
 
 /* section video */
 
@@ -220,10 +222,61 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: hsla(0, 0%, 0%, 0.3);
   cursor: pointer;
   transition: 0.3s;
 }
 .video:hover::after {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: hsla(0, 0%, 0%, 0.1);
 }
+
+/* -------------- */
+
+/* section partners-slider */
+
+.partners-slider {
+  border-radius: 1rem;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  pointer-events: none;
+}
+.partners-slider__inner-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+.partners-slider__wrapper {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-animation 15s linear infinite;
+}
+.partners-slider__wrapper:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll-animation {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(calc(-100% - 2rem));
+  }
+}
+.partners__slider__slide {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  min-width: 10rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  white-space: nowrap;
+}
+.partners__slider__slide img {
+  aspect-ratio: 1;
+  width: 5rem;
+}
+
+/* -------------- */

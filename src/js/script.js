@@ -8,9 +8,11 @@ function createOverlay(x) {
   if (visibilityOverlay === "false") {
     overlay.setAttribute("data-visible", "true");
     overlay.setAttribute("aria-hidden", "false");
+    x.setAttribute("data-visible", "true");
+    x.setAttribute("aria-expanded", "true");
   } else {
+    x.setAttribute("aria-expanded", "false");
     x.setAttribute("data-visible", "false");
-    x.setAttribute("aria-hidden", "true");
     overlay.setAttribute("data-visible", "false");
     overlay.setAttribute("aria-hidden", "true");
   }
@@ -18,7 +20,7 @@ function createOverlay(x) {
     overlay.setAttribute("data-visible", "false");
     overlay.setAttribute("aria-hidden", "true");
     x.setAttribute("data-visible", "false");
-    x.setAttribute("aria-hidden", "true");
+    x.setAttribute("aria-expanded", "false");
   });
 }
 
@@ -190,3 +192,16 @@ asideBtn.addEventListener("click", (e) => {
   }
   createOverlay(sidebar);
 });
+
+///////// fade in content animation
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+const hiddenSections = document.querySelectorAll(".hidden");
+hiddenSections.forEach((el) => observer.observe(el));
