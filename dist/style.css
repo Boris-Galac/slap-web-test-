@@ -147,8 +147,9 @@ html {
 
 html,
 body {
-  height: 100%;
   overflow-x: hidden;
+  min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 img,
@@ -707,7 +708,7 @@ p {
 }
 
 .search__overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 100;
   background-color: hsla(0, 0%, 0%, 0.5);
@@ -1235,10 +1236,98 @@ p {
 
 /* -------------- */
 
-/* programs page */
+/* projects counter */
 
-.main-programs {
+.projects-counter {
+  background-color: var(--neutral-600);
+  color: var(--white);
+  padding-block: 3rem;
+  padding-inline: 2rem;
 }
+
+.projects-counter {
+  background-color: var(--neutral-600);
+  color: var(--white);
+  padding-block: 3rem;
+  padding-inline: 2rem;
+}
+
+.projects-counter__wrapper {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-inline: auto;
+  gap: 2rem;
+  max-width: 60rem;
+}
+
+.projects-counter__col {
+  position: relative;
+  place-items: center;
+}
+
+.projects-counter__col:nth-child(1)::after,
+.projects-counter__col:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -1rem;
+  background-color: rgba(255, 255, 255, 0.31);
+}
+
+.projects-counter__box {
+  place-items: center;
+}
+
+.projects-counter__box-number,
+.projects-counter__box-symbol {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
+.projects-counter__box-heading {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+@media (min-width: 1015px) {
+  .projects-counter__col:nth-child(1)::after,
+  .projects-counter__col:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.31);
+  }
+}
+
+/* scroll to top btn */
+
+.scroll-to-top {
+  position: fixed;
+  aspect-ratio: 1;
+  background-color: var(--blue-600);
+  border-radius: 50%;
+  bottom: 2rem;
+  right: 2rem;
+  transition: 0.3s;
+  outline: 2px solid var(--blue-300);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--blue-400);
+}
+
+.scroll-to-top > img {
+  transform: rotate(90deg);
+  width: 1rem;
+}
+
+/*-------------------  */
 
 /* open ham animation */
 
@@ -1312,7 +1401,7 @@ p {
 }
 
 .overlay[data-visible="true"] {
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1362,6 +1451,33 @@ p {
 .show {
   opacity: 1;
   transform: translatex(0);
+}
+
+/* show button scroll to top */
+
+.scroll-to-top[data-visible="false"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-to-top[data-visible="true"] {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+/* progress indicator line */
+
+.indicator-scroll-line {
+  border: 2px solid limegreen;
+  box-shadow: 0 0 5px lime;
+}
+
+.indicator-scroll-line[data-visible="false"] {
+  display: none;
+}
+
+.indicator-scroll-line[data-visible="true"] {
+  display: block;
 }
 
 @media (min-width: 90rem) {

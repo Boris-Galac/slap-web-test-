@@ -62,7 +62,7 @@
   }
 }
 .overlay[data-visible="true"] {
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   inset: 0;
@@ -108,4 +108,27 @@
 .show {
   opacity: 1;
   transform: translatex(0);
+}
+
+/* show button scroll to top */
+
+.scroll-to-top[data-visible="false"] {
+  opacity: 0;
+  pointer-events: none;
+}
+.scroll-to-top[data-visible="true"] {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+/* progress indicator line */
+.indicator-scroll-line {
+  border: 2px solid limegreen;
+  box-shadow: 0 0 5px lime;
+}
+.indicator-scroll-line[data-visible="false"] {
+  display: none;
+}
+.indicator-scroll-line[data-visible="true"] {
+  display: block;
 }

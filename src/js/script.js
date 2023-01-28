@@ -33,15 +33,15 @@ hamBtn.addEventListener("click", (e) => {
     hamBtn.setAttribute("aria-expanded", "true");
     hamLines.forEach((line) => line.classList.add("active"));
     createOverlay(primaryNav);
-    // overlay
-    // overlay.classList.add("overlay");
-    // document.body.append(overlay);
-    // overlay.addEventListener("click", (e) => {
-    //   primaryNav.setAttribute("data-visible", "false");
-    //   hamBtn.setAttribute("aria-expanded", "false");
-    //   hamLines.forEach((line) => line.classList.remove("active"));
-    //   overlay.remove();
-    // });
+    overlay;
+    overlay.classList.add("overlay");
+    document.body.append(overlay);
+    overlay.addEventListener("click", (e) => {
+      primaryNav.setAttribute("data-visible", "false");
+      hamBtn.setAttribute("aria-expanded", "false");
+      hamLines.forEach((line) => line.classList.remove("active"));
+      overlay.remove();
+    });
     // -----
   } else {
     primaryNav.classList.add("inactive");
@@ -193,7 +193,36 @@ asideBtn.addEventListener("click", (e) => {
   createOverlay(sidebar);
 });
 
-///////// fade in content animation
+//////////// COUNTER
+
+const projectCounter = document.querySelector(".projects-counter");
+
+window.addEventListener("scroll", (e) => {
+  const rect = projectCounter.getBoundingClientRect();
+  if (rect.bottom <= window.innerHeight) {
+    const counters = document.querySelectorAll(".projects-counter__box-number");
+    const speed = 2000;
+
+    counters.forEach((counter) => {
+      function updateCount() {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText;
+
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 1);
+        } else {
+          count.innerText = target;
+        }
+      }
+      updateCount();
+    });
+  }
+});
+
+///////// CONTENT FADE IN ANIMATION
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -205,3 +234,32 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenSections = document.querySelectorAll(".hidden");
 hiddenSections.forEach((el) => observer.observe(el));
+
+////// SCROLL TO TOP BTN
+
+const scrollToTop = document.querySelector(".scroll-to-top");
+scrollToTop.addEventListener("click", (e) => {
+  window.scroll({
+    top: 0,
+  });
+});
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > 150) {
+    scrollToTop.setAttribute("data-visible", "true");
+  } else scrollToTop.setAttribute("data-visible", "false");
+});
+
+///////// PROGRESS LINE INDICATOR
+
+window.addEventListener("scroll", (e) => {
+  let winScroll = window.scrollY; /// 0 - 1519
+  let height = document.body.scrollHeight - innerHeight; /// 2806 - 1287
+
+  let scrolled = Math.ceil((winScroll / height) * 100);
+  let indicatorLine = document.querySelector(".indicator-scroll-line");
+  console.log(scrolled);
+  indicatorLine.setAttribute("data-visible", "true");
+  indicatorLine.style = `
+      width: ${scrolled}%;
+    `;
+});

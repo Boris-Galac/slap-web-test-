@@ -90,6 +90,7 @@
           <li class="nav__item"><a class="nav__link" href="#">news</a></li>
         </ul>
       </nav>
+      <div class="indicator-scroll-line" data-visible="false"></div>
     </header>
     <main class="main">
 
@@ -262,6 +263,44 @@
           </div>
       </section>
 
+      <!----------------------->
+
+      <!-- Projects counter -->
+
+      <div class="projects-counter">
+        <div class="projects-counter__wrapper d-grid">
+          <div class="projects-counter__col d-grid">
+            <figure class="projects-counter__box d-grid">
+              <img src="/src/assests/images/projects.svg" alt="projects">
+              <div class="projects-counter__box-body text-center">
+                <span class="projects-counter__box-number" aria-label="number of projects" data-target="52">0</span>
+                <span class="projects-counter__box-symbol" aria-hidden="true">+</span>
+              </div>
+            </figure>
+            <p class="projects-counter__box-heading">Projekti</p>
+          </div>
+          <div class="projects-counter__col d-grid">
+            <figure class="projects-counter__box d-grid">
+              <img src="/src/assests/images/partnership.svg" alt="partnership">
+              <div class="projects-counter__box-body text-center">
+                <span class="projects-counter__box-number" aria-label="number of partnership" data-target="12">0</span>
+                <span class="projects-counter__box-symbol"aria-hidden="true">+</span>
+              </div>
+            </figure>
+            <p class="projects-counter__box-heading">Partneri</p>
+          </div>
+          <div class="projects-counter__col d-grid">
+            <figure class="projects-counter__box d-grid">
+              <img src="/src/assests/images/hand.svg" alt="revenue">
+              <div class="projects-counter__box-body text-center">
+                <span class="projects-counter__box-number" aria-label="amount of revenue" data-target="300000">0</span>
+                <span class="projects-counter__box-symbol" aria-label="euro">€+</span>
+              </div>
+            </figure>
+            <p class="projects-counter__box-heading">Vrijednost projekata</p>
+          </div>
+        </div>
+      </div>
       <!----------------------->
 
         <!-- section partners-slider -->
@@ -468,9 +507,13 @@
     </form>
   </div>
   <!------------------->
-
   <!-- overlay -->
   <div class="overlay" data-visible="false" aria-hidden="true"></div>
+  <!------------------->
+  <!-- scroll to top -->
+  <button class="scroll-to-top" data-visible="false">
+    <img src="/src/assests/icons/right-arrow.svg" aria-hidden="true">
+  </button>
   <!------------------->
   </body>
 </html>
