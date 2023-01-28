@@ -93,7 +93,7 @@
   top: 9px;
 }
 .nav__ham-line:last-child {
-  bottom: 9px;
+  bottom: 8px;
 }
 .nav__ham-line {
   pointer-events: none;
