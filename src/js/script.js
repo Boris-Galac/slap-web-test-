@@ -33,7 +33,10 @@ hamBtn.addEventListener("click", (e) => {
     hamBtn.setAttribute("aria-expanded", "true");
     hamLines.forEach((line) => line.classList.add("active"));
     createOverlay(primaryNav);
-    overlay;
+    sidebar.style = `
+      z-index: 2;
+    `;
+    ////// overlay;
     overlay.classList.add("overlay");
     document.body.append(overlay);
     overlay.addEventListener("click", (e) => {
@@ -42,8 +45,11 @@ hamBtn.addEventListener("click", (e) => {
       hamLines.forEach((line) => line.classList.remove("active"));
       overlay.remove();
     });
-    // -----
+    ////// -----
   } else {
+    sidebar.style = `
+    z-index: 31;
+  `;
     primaryNav.classList.add("inactive");
     primaryNav.setAttribute("data-visible", "false");
     overlay.setAttribute("data-visible", "false");
@@ -107,7 +113,6 @@ if (location.href.includes("index")) {
       }
     });
   }
-  const carouselSlider = document.querySelector(".hero__slider");
   const images = document.querySelectorAll(".hero__slider-picture");
 
   const auto = true;

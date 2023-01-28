@@ -1,5 +1,9 @@
 /* socials contact */
-
+.header {
+  position: fixed;
+  z-index: 20;
+  inset: auto 0;
+}
 .header__contact {
   position: relative;
   background-color: var(--slap-clr);
@@ -33,10 +37,10 @@
 
 .nav__list {
   justify-content: center;
-  gap: 3rem;
+  gap: clamp(1rem, 5vw, 3rem);
   font-weight: 500;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   background-color: transparent;
   text-align: center;
   inset: 0;

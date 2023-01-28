@@ -41,11 +41,10 @@
 /* overlay */
 
 .overlay[data-visible="false"] {
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   inset: 0;
-  z-index: 0;
   transition: 0.5s;
   cursor: pointer;
   z-index: 2;
