@@ -172,15 +172,15 @@ function closeSearchWindow() {
 // MAIN PADDING TOP
 
 const headerHeight = document.querySelector(".header").scrollHeight;
-const main = document.querySelector(".main");
+const main = document.querySelector("main");
 function paddingTopMain() {
   main.style = `
-    padding-top: ${headerHeight}px;
+    padding-top: ${headerHeight - 3}px;
   `;
 }
-if (window.innerWidth > 960) {
-  paddingTopMain();
-}
+paddingTopMain();
+// if (window.innerWidth > 960) {
+// }
 
 // SIDEBAR BUTTON to OPEN
 

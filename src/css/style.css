@@ -20,6 +20,7 @@
 /* layout */
 
 @import "layout/front-page.css";
+@import "layout/programs.css";
 
 @import "utilities/js-classes.css";
 @import "utilities/utilities.css";

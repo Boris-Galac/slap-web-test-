@@ -124,6 +124,8 @@
 .indicator-scroll-line {
   border: 2px solid limegreen;
   box-shadow: 0 0 5px lime;
+  position: relative;
+  bottom: 4px;
 }
 .indicator-scroll-line[data-visible="false"] {
   display: none;

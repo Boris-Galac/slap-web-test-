@@ -245,14 +245,14 @@ select {
 .h1--heading {
   font-weight: 400;
   text-transform: uppercase;
-  font-size: clamp(2rem, 8vw, 3rem);
+  font-size: clamp(1rem, 6vw, 3rem);
   color: var(--neutral-900);
 }
 
 .h2--heading {
   text-transform: capitalize;
   font-weight: 500;
-  font-size: clamp(2rem, 8vw, 2.5rem);
+  font-size: clamp(1rem, 8vw, 2.5rem);
   color: var(--neutral-800);
   margin-bottom: 2rem;
 }
@@ -372,7 +372,7 @@ p {
 }
 
 .nav__ham-line:last-child {
-  bottom: 9px;
+  bottom: 8px;
 }
 
 .nav__ham-line {
@@ -1335,6 +1335,87 @@ p {
 
 /*-------------------  */
 
+.programs {
+}
+
+.page-indicator {
+  background-color: var(--neutral-200);
+  padding-block: 2rem;
+  padding-inline: 10vw;
+  margin-bottom: 4rem;
+}
+
+.programs-heading {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.programs-page__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-inline: 5vw;
+}
+
+/* article program card */
+
+.article-card {
+  filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.article-card__header {
+}
+
+.article-card__header > img {
+  width: 100%;
+}
+
+.article-card__body {
+  background-color: var(--neutral-100);
+  padding: 1rem;
+}
+
+.article-card__meta {
+  align-items: center;
+  gap: 0.7rem;
+  padding-block: 0.3rem;
+  padding-inline: 1rem;
+  background-color: var(--neutral-200);
+}
+
+.article-meta__date {
+  gap: 0.5rem;
+}
+
+.date {
+  color: var(--neutral-500);
+}
+
+.article-card__category,
+.article-card__heading,
+.article-card__text {
+  color: var(--neutral-700);
+}
+
+.article-card__category {
+}
+
+.article-card__heading {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  padding-inline: min();
+}
+
+.article-card__text {
+  margin-bottom: 1rem;
+}
+
+.article-card__btn {
+}
+
 /* open ham animation */
 
 .nav__ham-line:first-child.active {
@@ -1475,6 +1556,8 @@ p {
 .indicator-scroll-line {
   border: 2px solid limegreen;
   box-shadow: 0 0 5px lime;
+  position: relative;
+  bottom: 4px;
 }
 
 .indicator-scroll-line[data-visible="false"] {
@@ -1504,6 +1587,18 @@ p {
 .primary-btn:hover {
   background-color: var(--primary-btn-clr-hover);
   box-shadow: 0 1.5px 10px hsla(0, 0%, 0%, 0.599);
+}
+
+.secondary-btn {
+  background-color: #fff;
+  border: 2px solid var(--primary-btn-clr);
+  font-weight: 500;
+  color: var(--primary-btn-clr);
+  transition: 0.15s;
+}
+
+.secondary-btn:hover {
+  background-color: var(--neutral-200);
 }
 
 /* layout */

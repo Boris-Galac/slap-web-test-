@@ -96,22 +96,149 @@
           <li class="nav__item"><a class="nav__link" href="#">news</a></li>
         </ul>
       </nav>
+      <div class="indicator-scroll-line" data-visible="false"></div>
     </header>
 
     <main class="main main-programs">
       <!-- section programs -->
-
-      <section class="section">
+      <section class="section programs">
+        <div class="page-indicator">
+          <h1 class="h1--heading programs-heading">
+            <span>programi</span> / <span>turistica</span>
+          </h1>
+        </div>
         <div class="container">
-          <h2 class="h2--heading">Programs</h2>
+        <div class="programs-page__wrapper d-grid">
+            <article class="programs__program-article article-card">
+              <div class="article-card__header">
+                <img
+                  src="/src/assests/images/card-img.jpg"
+                  alt="article image"
+                />
+              </div>
+              <span class="article-card__meta d-flex">
+                <span class="article-meta__date d-flex"
+                  ><img
+                    src="/src/assests/icons/date-icon.svg"
+                    alt="datetime icon"
+                  />
+                  <p class="date">08. ožujak 2023.</p></span
+                >
+                <span class="article-card__category">Turistica</span>
+              </span>
+              <div class="article-card__body">
+                <h2 class="article-card__heading">
+                  Inclusive community - Europske snage solidarnosti
+                </h2>
+                <p class="article-card__text">
+                  U modernom društvu volontiranje se potiče i vrednuje kao jedan
+                  od ključnih pokretača razvoja socijalnog kapitala.
+                </p>
+                <button class="article-card__btn secondary-btn">
+                  vidi više
+                </button>
+              </div>
+            </article>
+            <article class="programs__program-article article-card">
+              <div class="article-card__header">
+                <img
+                  src="/src/assests/images/card-img.jpg"
+                  alt="article image"
+                />
+              </div>
+              <span class="article-card__meta d-flex">
+                <span class="article-meta__date d-flex"
+                  ><img
+                    src="/src/assests/icons/date-icon.svg"
+                    alt="datetime icon"
+                  />
+                  <p class="date">08. ožujak 2023.</p></span
+                >
+                <span class="article-card__category">Turistica</span>
+              </span>
+              <div class="article-card__body">
+                <h2 class="article-card__heading">
+                  Inclusive community - Europske snage solidarnosti
+                </h2>
+                <p class="article-card__text">
+                  U modernom društvu volontiranje se potiče i vrednuje kao jedan
+                  od ključnih pokretača razvoja socijalnog kapitala.
+                </p>
+                <button class="article-card__btn secondary-btn">
+                  vidi više
+                </button>
+              </div>
+            </article>
+            <article class="programs__program-article article-card">
+              <div class="article-card__header">
+                <img
+                  src="/src/assests/images/card-img.jpg"
+                  alt="article image"
+                />
+              </div>
+              <span class="article-card__meta d-flex">
+                <span class="article-meta__date d-flex"
+                  ><img
+                    src="/src/assests/icons/date-icon.svg"
+                    alt="datetime icon"
+                  />
+                  <p class="date">08. ožujak 2023.</p></span
+                >
+                <span class="article-card__category">Turistica</span>
+              </span>
+              <div class="article-card__body">
+                <h2 class="article-card__heading">
+                  Inclusive community - Europske snage solidarnosti
+                </h2>
+                <p class="article-card__text">
+                  U modernom društvu volontiranje se potiče i vrednuje kao jedan
+                  od ključnih pokretača razvoja socijalnog kapitala.
+                </p>
+                <button class="article-card__btn secondary-btn">
+                  vidi više
+                </button>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
-
       <!-------------------->
     </main>
-
+    <!--sidebar-->
+    <aside class="sidebar" data-visible="false" aria-expanded="false">
+      <div role="button" class="sidebar-btn">menu</div>
+      <div class="sidebar-row">
+        <form
+          id="search"
+          class="form__search"
+          aria-label="search bar"
+          id="searchbar"
+        >
+          <input
+            class="search-input"
+            type="text"
+            title="search bar"
+            name="search"
+            id="search"
+            placeholder="Search for something..."
+          />
+          <button class="search-submit" type="submit">
+            <img aria-hidden="true" src="/src/assests/icons/search.svg" />
+          </button>
+        </form>
+      </div>
+      <div class="sidebar-row">
+        <h3 class="sidebar__heading">Projects</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a href="#">local empowerment</a></li>
+          <li class="sidebar__item"><a href="#">capacity building</a></li>
+          <li class="sidebar__item"><a href="#">slap</a></li>
+          <li class="sidebar__item"><a href="#">slap interview</a></li>
+        </ul>
+      </div>
+    </aside>
+    <!------------------->
     <!-- search bar -->
-
     <div class="search__overlay" aria-hidden="true" data-visible="false">
       <button aria-label="close search" class="search__close">
         <div aria-hidden="true" class="line"></div>
@@ -136,7 +263,53 @@
         </button>
       </form>
     </div>
-
     <!------------------->
+    <!-- overlay -->
+    <div class="overlay" data-visible="false" aria-hidden="true"></div>
+    <!------------------->
+      <!-- scroll to top -->
+  <button class="scroll-to-top" data-visible="false">
+    <img src="/src/assests/icons/right-arrow.svg" aria-hidden="true">
+  </button>
+  <!------------------->
+    <!-- footer -->
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__col">
+        <h2 class="footer__heading">gdje smo</h2>
+        <ul class="footer__list d-flex">
+          <li class="footer__item d-flex"><img src="/src/assests/icons/location.svg" aria-hidden="true">Otokara Keršovanija 31, 31 000 Osijek</li>
+          <li class="footer__item d-flex"><img src="/src/assests/icons/tel.svg" aria-hidden="true">+ 385 (31) 213 556</li>
+          <li class="footer__item d-flex"><img src="/src/assests/icons/mail-icon.svg" aria-hidden="true">udruga.slap@gmail.com</li>
+          <li class="footer__item d-flex"><img src="/src/assests/icons/globe.svg" aria-hidden="true"><a href="#">www.panonatours.com</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__heading">info</h2>
+        <ul class="footer__list d-flex">
+          <li class="footer__item d-flex"><img src="/src/assests/icons/bank-card.svg" aria-hidden="true">IBAN HR1723600001101866908</li>
+          <li class="footer__item d-flex"><img src="/src/assests/icons/mail-icon.svg" aria-hidden="true">udruga.slap@gmail.com</li>
+          <li class="footer__item d-flex"><img src="/src/assests/icons/clock.svg" aria-hidden="true">Pon - Pet 08:00 - 16:00</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__heading">linkovi</h2>
+        <nav class="footer__nav" aria-label="footer navigation">
+          <ul class="footer__list d-flex">
+            <li class="footer__item d-flex"><a href="#">naslovna</a></li>
+            <li class="footer__item d-flex"><a href="#">slap</a></li>
+            <li class="footer__item d-flex"><a href="#">portfolio</a></li>
+            <li class="footer__item d-flex"><a href="#">programi</a></li>
+            <li class="footer__item d-flex"><a href="#">tim</a></li>
+            <li class="footer__item d-flex"><a href="#">dokumenti</a></li>
+            <li class="footer__item d-flex"><a href="#">news</a></li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+  <div class="footer__copyright">
+    <h3 class="footer__copyright-heading">Copyright &copy; 2023. - Slap</h3>
+  </div>
+  </footer>
   </body>
 </html>
